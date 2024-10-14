@@ -1,3 +1,5 @@
+
+
 export default function Homepage(){
     return (
         <>
@@ -29,7 +31,7 @@ export default function Homepage(){
                     This is Project which Contains the Information about 30 Days Challenge
                 </div>
                 <div className="card__actions">
-                    <a className="card__button card__button--mark" href="./Timer/">Visit</a>
+                    <a className="card__button card__button--mark" href="./challenge">Visit</a>
                 </div>
                 </div>
             </div>
@@ -42,7 +44,7 @@ export default function Homepage(){
                     This is Project which Contains the Information about 
                 </div>
                 <div className="card__actions">
-                    <a className="card__button card__button--mark" href="./">Coming Soon</a>
+                    <a className="card__button card__button--mark" href="">Coming Soon</a>
                 </div>
                 </div>
             </div>

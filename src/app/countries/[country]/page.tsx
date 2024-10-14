@@ -27,7 +27,6 @@ export default function CountryPage({params}:{params:{params:string}&{country:st
 
 return(
   <>
-    <div style={{marginBottom:'1rem'}}>&lt; <a href="/countries">back</a></div>
     <div style={{justifyContent:'center', display:"flex", alignContent:"center"}}>
     <CheckCountry />
     </div>

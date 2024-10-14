@@ -1,0 +1,31 @@
+*{
+    font-family: "Arial", sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #222222;
+    text-decoration: none;
+  }
+.input-style {
+    border: solid #222222;
+    height: 17px;
+}
+.comp_button_style {
+    display: inline-flex;
+    margin: 3px;
+    text-align: center;
+    font-weight: 700;
+    border: 3px solid #222222;
+    background-color: #fff;
+    color: #222222;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+.time-style {
+    font-size: 55px;
+}
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0.3rem;
+}
