@@ -1,35 +1,23 @@
 import { countriesList } from "../page"
 
-export default function CountryPage({params}:{params:{params:string}&{country:string}}){
+export default function CountryPage({ params }: { params: { country: string } }) {
+  const selectedCountry = countriesList.find((country) => country.name === params.country);
 
-  function CheckCountry() {
-
-    const selectedCountry = countriesList.find((country) => country.name === params.country)
-    
-      return(
-        <>
-        <div className="card">
+  return (
+    <div style={{ justifyContent: 'center', display: 'flex', alignContent: 'center' }}>
+      <div className="card">
         <h1>Country: </h1>
-        { selectedCountry && (
+        {selectedCountry ? (
           <div>
             <p>Name: {selectedCountry.name}</p>
             <p>Capital: {selectedCountry.capital}</p>
             <p>Population: {selectedCountry.population}</p>
-            <p>Size: {selectedCountry.size} km^(2)</p>
+            <p>Size: {selectedCountry.size} km<sup>2</sup></p>
           </div>
-       )}
-        </div>
-        </>
-      )
-    }
-  
-
-
-return(
-  <>
-    <div style={{justifyContent:'center', display:"flex", alignContent:"center"}}>
-    <CheckCountry />
+        ) : (
+          <p>Country not found</p>
+        )}
+      </div>
     </div>
-  </>  
-  )
+  );
 }
