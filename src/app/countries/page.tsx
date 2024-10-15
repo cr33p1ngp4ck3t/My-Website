@@ -8,13 +8,13 @@ interface Country {
   capital: string;
 }
 
-export let countriesList: Country[] = [
+const countriesList: Country[] = [
   { name: "Pakistan", population: 235800000, size: 770880, capital: "Islamabad" },
   { name: "India", population: 1417000000, size: 3287000, capital: "Delhi" },
   { name: "Afghanistan", population: 41130000, size: 652864, capital: "Kabul" }
 ];
 
-export default function CountryName() {
+const CountryName = () => {
   return (
     <>
       <h1>Countries</h1>
@@ -31,3 +31,5 @@ export default function CountryName() {
     </>
   );
 }
+
+export default CountryName;
