@@ -1,4 +1,4 @@
-import { countriesList } from "../page"
+import { countriesList } from "../countrylist"
 
 export default function CountryPage({ params }: { params: { country: string } }) {
   const selectedCountry = countriesList.find((country) => country.name === params.country);
