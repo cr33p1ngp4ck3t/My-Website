@@ -1,22 +1,66 @@
-// page.tsx
-import React from "react";
-import '../styles/style.css';
-import { countriesList } from "./countrylist";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+"use client";
 
-export default function CountryName() {
+import React, { useEffect, useState } from 'react';
+import { fetchCountries, Country } from '../../../lib/countryapi';
+
+export default function CountryPage({ params }: { params: { country: string } }) {
+  const [countries, setCountries] = useState<Country[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+
+  useEffect(() => {
+    const getCountries = async () => {
+      const fetchedCountries = await fetchCountries();
+      setCountries(fetchedCountries);
+    };
+
+    getCountries();
+  }, []);
+
+  const filteredCountries = countries.filter(country =>
+    country.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const groupedCountries = filteredCountries.reduce((acc: { [key: string]: Country[] }, country) => {
+    const firstLetter = country.name.charAt(0).toUpperCase();
+    if (!acc[firstLetter]) acc[firstLetter] = [];
+    acc[firstLetter].push(country);
+    return acc;
+  }, {});
+
   return (
-    <>
-      <h1>Countries</h1>
-      <p className="parag">Here are a list of Countries, select one to get further information about it</p>
-      <ul>
-        {countriesList.map((country) => (
-          <li key={country.name} className="liststyle">
-            <a href={`countries/${country.name}`}>
-              <button className="bw-button-style">{country.name}</button>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </>
+    <div style={{ justifyContent: 'center', display: 'flex', alignContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+      <input
+        type="text"
+        placeholder="Search Countries..."
+        value={searchTerm}
+        onChange={e => setSearchTerm(e.target.value)}
+        className='input-style-1'
+      />
+      <div>
+        <h1>Countries</h1>
+        <div >
+          {Object.keys(groupedCountries).sort().map(letter => (
+            <button key={letter} onClick={() => setSelectedLetter(letter)} className="bw-button-style">
+              {letter}
+            </button>
+          ))}
+        </div>
+        <ul>
+          {selectedLetter && groupedCountries[selectedLetter] ? (
+            groupedCountries[selectedLetter].map((country) => (
+              <li key={country.name} className="liststyle">
+                <a href={`countries/${country.name.replace(/\s+/g, '-')}`}>
+                  <button className="bw-button-style">{country.name}</button>
+                </a>
+              </li>
+            ))
+          ) : (
+            <p>Select a letter to see countries</p>
+          )}
+        </ul>
+      </div>
+    </div>
   );
 }

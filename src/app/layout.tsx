@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import "./styles/style.css"
 import Breadcrumb  from "../../components/ux/breadcrumb"
