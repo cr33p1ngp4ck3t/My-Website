@@ -2,6 +2,7 @@
 "use client";
 import "./styles/style.css"
 import Breadcrumb  from "../../components/ux/breadcrumb"
+import Link from 'next/link'
 
 // export const metadata = {
 //   title: 'Next.js',
@@ -21,9 +22,9 @@ export default function RootLayout({
           <h2>MyWebsite</h2>
         </div>
         <div style={{textAlign:"right"}}>
-        <button className="button-style"><a href="/" >Home</a></button>
-        <button className="button-style"><a href="https://github.com/cr33p1ngp4ck3t" target="_blank">Github</a></button>
-        <button className="button-style"><a href="https://www.npmjs.com/~creepingpacket" target="_blank">NPM</a></button>
+        <button className="button-style"><Link href="/" >Home</Link></button>
+        <button className="button-style"><Link href="./about" >About</Link></button>
+        {/* <button className="button-style"><a href="https://www.npmjs.com/~creepingpacket" target="_blank">NPM</a></button> */}
         </div>
       </header>
       <div className="content">
@@ -37,9 +38,9 @@ export default function RootLayout({
         <div>
           <div>
             <div>
-              <a className="logo" href="https://github.com/cr33p1ngp4ck3t" target="_blank"><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/></a>
-              <a className="logo" href="www.linkedin.com/in/creepingpacket" target="_blank"><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/></a>
-              <a className="logo" href="https://www.npmjs.com/~creepingpacket" target="_blank"><img width="22" height="22" src="https://img.icons8.com/windows/32/npm.png" alt="npm" style={{border:"2px solid #323232", borderRadius:"4px"}}/></a>
+              <Link className="logo" href="www.linkedin.com/in/creepingpacket" target="_blank"><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/></Link>
+              <Link className="logo" href="https://www.npmjs.com/~creepingpacket" target="_blank"><img width="22" height="22" src="https://img.icons8.com/windows/32/npm.png" alt="npm" style={{border:"2px solid #323232", borderRadius:"4px"}}/></Link>
+              <Link className="logo" href="https://github.com/cr33p1ngp4ck3t" target="_blank"><img width="26" height="26" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/></Link>
             </div>
           </div>
         </div>

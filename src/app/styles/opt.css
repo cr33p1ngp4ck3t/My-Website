@@ -37,3 +37,16 @@
     max-width: 80%;
     float: right;
 }
+
+.profile-image {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+        margin-right: auto;
+    }
+    .image-style {
+        margin-left: auto;
+    }
+}

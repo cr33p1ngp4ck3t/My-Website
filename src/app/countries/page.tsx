@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react';
 import { fetchCountries, Country } from '../../../lib/countryapi';
 
@@ -51,9 +51,9 @@ export default function CountryPage({ params }: { params: { country: string } })
           {selectedLetter && groupedCountries[selectedLetter] ? (
             groupedCountries[selectedLetter].map((country) => (
               <li key={country.name} className="liststyle">
-                <a href={`countries/${country.name.replace(/\s+/g, '-')}`}>
+                <Link href={`countries/${country.name.replace(/\s+/g, '-')}`}>
                   <button className="bw-button-style">{country.name}</button>
-                </a>
+                </Link>
               </li>
             ))
           ) : (
