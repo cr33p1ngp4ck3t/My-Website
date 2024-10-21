@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react';
 import { fetchCountries, Country } from '../../../lib/countryapi';
+import "@/app/styles/style.css"
 
 export default function CountryPage({ params }: { params: { country: string } }) {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -50,7 +51,7 @@ export default function CountryPage({ params }: { params: { country: string } })
         <ul>
           {selectedLetter && groupedCountries[selectedLetter] ? (
             groupedCountries[selectedLetter].map((country) => (
-              <li key={country.name} className="liststyle">
+              <li key={country.name} className="list-style">
                 <Link href={`countries/${country.name.replace(/\s+/g, '-')}`}>
                   <button className="bw-button-style">{country.name}</button>
                 </Link>

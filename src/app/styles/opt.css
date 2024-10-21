@@ -1,9 +1,9 @@
 *{
-    font-family: "Arial", sans-serif;
-    text-transform: capitalize;
-    font-weight: 600;
-    color: #222222;
-    text-decoration: none;
+    font-family: "Arial", sans-serif !important;
+    text-transform: capitalize !important;
+    font-weight: 600 ;
+    color: #222222 !important;
+    text-decoration: none !important;
   }
 .input-style {
     border: solid #222222;
@@ -29,7 +29,7 @@
     align-items: baseline;
     margin: 0.3rem;
 }
-.input-style-1{
+.input-style-1{ 
     display: flex;
     border: 2px solid #222222;
     width: 300px;
@@ -40,13 +40,72 @@
 
 .profile-image {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
+}
 
-    h1 {
-        margin-right: auto;
-    }
+.image-style {
+    width: 300px;
+    height: 300px;
+}
+.headline {
+    font-weight: bold;
+    font-size: 2rem;
+}
+h1,h2,h3,h4,h5,h6 {
+    display: flex;
+    font-weight: 900;
+}
+@media (max-width:480px) {
     .image-style {
-        margin-left: auto;
+        width: 150px;
+        height: 150px;
+    }
+    .card__alert {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+}
+.heading-to-center{
+    justify-self: center;
+}
+.skill-section {
+    display: flex;
+    justify-content: space-between;
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .message {
+        justify-content: right;
+        align-items: right;
+        width: 800px;
     }
 }
+
+.card__button-custom {
+    display: flex;
+    width: auto;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #222222;
+    background-color: #fff;
+    color: #222222;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+  .card__button-custom:hover{
+    box-shadow: 5px 5px 0 #222222;
+    transition: 0.2s ease;
+    transform: translate(-3px,-3px);
+  }
