@@ -3,7 +3,7 @@
 import "./styles/style.css"
 import Breadcrumb  from "../../components/ux/breadcrumb"
 import {Header, Footer} from '../../components/ux/nav'
-
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({
   children,
@@ -18,6 +18,7 @@ export default function RootLayout({
             <Breadcrumb/>
             {children}
           </div>
+          <Analytics />
         <Footer/>
       </body>
     </html>
