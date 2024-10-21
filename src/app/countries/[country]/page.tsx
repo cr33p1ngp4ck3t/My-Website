@@ -21,7 +21,7 @@ export default function CountryPage({ params }: { params: { country: string } })
   return (
     <div style={{ justifyContent: 'center', display: 'flex', alignContent: 'center' }}>
       <div className="card">
-        <h1>Country: </h1>
+        <h1>Country Information</h1>
         {selectedCountry ? (
           <div>
             <p>Name: {selectedCountry.name}</p>
