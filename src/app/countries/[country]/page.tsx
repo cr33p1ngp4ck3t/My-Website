@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { fetchCountries, Country } from '../../../../lib/countryapi';
+import '../../styles/style.css'
 
 export default function CountryPage({ params }: { params: { country: string } }) {
   const [selectedCountry, setSelectedCountry] = useState<Country | undefined>(undefined);

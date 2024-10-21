@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react';
 import { fetchCountries, Country } from '../../../lib/countryapi';
-import "@/app/styles/style.css"
+import "../styles/style.css"
 
 export default function CountryPage({ params }: { params: { country: string } }) {
   const [countries, setCountries] = useState<Country[]>([]);
