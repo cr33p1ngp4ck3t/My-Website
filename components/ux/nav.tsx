@@ -12,6 +12,7 @@ export function Header() {
             <div style={{textAlign:"right"}}>
             <button className="button-style"><Link href="/" >Home</Link></button>
             <button className="button-style"><Link href="./about" >About</Link></button>
+            <button className="button-style"><Link href="./contact" >Contact</Link></button>
             </div>
       </header>
         </>

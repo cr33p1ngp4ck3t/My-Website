@@ -38,13 +38,13 @@ export default function Homepage(){
             <div>
                 <div className="card">
                 <div className="card__header">
-                    <div className="card__alert">Project: </div>
+                    <div className="card__alert">Project: Resume Builder</div>
                 </div>
                 <div className="card__message">
-                    This is Project which Contains the Information about 
+                    A Resume Builder Website that dynamically builds a simple resume (I didnt had much time to improve it)
                 </div>
                 <div className="card__actions">
-                    <Link className="card__button card__button--mark" href="">Coming Soon</Link>
+                    <Link className="card__button card__button--mark" href="https://cpp-resume-builder.vercel.app/" target='_blank'>Visit</Link>
                 </div>
                 </div>
             </div>
