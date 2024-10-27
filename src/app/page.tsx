@@ -57,7 +57,7 @@ export default function Homepage(){
                     This is a Project in which I created Template of Figma
                 </div>
                 <div className="card__actions">
-                    <Link className="card__button card__button--mark" href="https://cpp-figma-template.vercel.app">Visit</Link>
+                    <Link className="card__button card__button--mark" href="https://cpp-figma-template.vercel.app" target='_blank'>Visit</Link>
                 </div>
                 </div>
             </div>
