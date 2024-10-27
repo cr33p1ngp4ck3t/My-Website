@@ -51,13 +51,13 @@ export default function Homepage(){
             <div>
                 <div className="card">
                 <div className="card__header">
-                    <div className="card__alert">Project: </div>
+                    <div className="card__alert">Project: Figma Template</div>
                 </div>
                 <div className="card__message">
-                    This is Project which Contains the Information about 
+                    This is a Project in which I created Template of Figma
                 </div>
                 <div className="card__actions">
-                    <Link className="card__button card__button--mark" href="./">Coming Soon</Link>
+                    <Link className="card__button card__button--mark" href="https://cpp-figma-template.vercel.app">Visit</Link>
                 </div>
                 </div>
             </div>
